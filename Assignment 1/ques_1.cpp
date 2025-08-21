@@ -1,4 +1,4 @@
-/* 1) Developa Menudrivenprogramtodemonstrate the followingoperations of Arrays
+/* 1) Develop a Menu driven program to demonstrate the following operations of Arrays
 ——MENU——-
 1.CREATE
 2.DISPLAY
