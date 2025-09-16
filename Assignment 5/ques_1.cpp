@@ -187,24 +187,24 @@ int main(){
         {
 
         case 1:
-            int val;
+            int val1;
             cout << "Enter the value you want to insert at the beginning: ";
-            cin >> val;
-            head = insertHead(head, val);
+            cin >> val1;
+            head = insertHead(head, val1);
             break;
 
         case 2:
-            int val;
+            int val2;
             cout << "Enter the value you want to insert at the end: ";
-            cin >> val;
-            head = insertTail(head, val);
+            cin >> val2;
+            head = insertTail(head, val2);
             break;
 
         case 3:
-            int val, pos;
+            int val3, pos;
             cout << "Enter the value you want to insert and the element value before which you want to insert: ";
-            cin >> val >> pos;
-            head = insertPosition(head, val, pos);
+            cin >> val3 >> pos;
+            head = insertPosition(head, val3, pos);
             break;
 
         case 4:
@@ -223,7 +223,10 @@ int main(){
             break;
 
         case 7:
-            cout << checkIfPresent(head, val);
+            int val4;
+            cout << " Enter the value that you want to check: ";
+            cin >> val4;
+            cout << checkIfPresent(head, val4);
             break;
 
         case 8:
