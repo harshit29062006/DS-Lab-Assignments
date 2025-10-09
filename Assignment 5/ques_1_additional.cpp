@@ -60,15 +60,3 @@ Node* findIntersection(Node* firstHead, Node* secondHead){
     }
     return temp1;
 }
-
-
-int main(){
-    vector<int> arr1 = {4, 4, 3, 2, 1};
-    vector<int> arr2 = {1, 2, 3, 2, 1};
-    int n;
-    Node *firstHead = convertArr2LL(arr1);
-    Node *secondHead = convertArr2LL(arr2);
-    Node* head = findIntersection(firstHead, secondHead);
-    print(head);
-    return 0;
-}
