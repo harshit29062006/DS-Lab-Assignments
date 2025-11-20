@@ -71,7 +71,7 @@ int maxElement(Node* root){
 
     return root->data;
 }
-int miElement(Node* root){
+int minElement(Node* root){
     if(root == NULL) return NULL;
 
     while(root != NULL){
