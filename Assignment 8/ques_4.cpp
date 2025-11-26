@@ -3,8 +3,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class TreeNode {
-    public:
+class TreeNode{
+public:
     int data;
     TreeNode *left;
     TreeNode *right;
@@ -12,15 +12,19 @@ class TreeNode {
         data = val;
         left = nullptr;
         right = nullptr;
-    } 
+    }
 };
 
-bool isValidBST(TreeNode* root){
-    return isValidBST(root, long.MIN_VALUE, long.MAX_VALUE);
+bool isValidBSTUtil(TreeNode* root, long minVal, long maxVal){
+    if(root == NULL) return true;
+
+    if(root->data <= minVal || root->data >= maxVal)
+        return false;
+
+    return isValidBSTUtil(root->left, minVal, root->data) &&
+           isValidBSTUtil(root->right, root->data, maxVal);
 }
 
-bool isValidBST(TreeNode* root, long minVal, long maxVal){
-    if(root == NULL) return true;
-    if(root->data >= maxVal || root->data <= minVal) return false;
-    return isValidBST(root->left, minVal, root->data) && isValidBST(root->right, root->data, maxVal);
+bool isValidBST(TreeNode* root){
+    return isValidBSTUtil(root, LONG_MIN, LONG_MAX);
 }
